@@ -249,13 +249,9 @@ mvn jacoco:report
 4. Push to the branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
 
-## 📝 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
 ## 👥 Authors
 
-- **Your Name** - *Initial work* - [YourGitHub](https://github.com/yourusername)
+- **Your Name** - *Initial work* - [YourGitHub](https://github.com/Aditya-Thakur-369)
 
 ## 🙏 Acknowledgments
 
@@ -266,9 +262,9 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 📧 Contact
 
-Your Name - your.email@example.com
+Your Name - adityachauhan0369@gmail.com
 
-Project Link: [https://github.com/yourusername/library-management-system](https://github.com/yourusername/library-management-system)
+Project Link: [https://github.com/Aditya-Thakur-0369/library-management-system](https://github.com/Aditya-Thakur-0369/library-management-system)
 
 ---
 ⭐️ Star this repo if you find it helpful!

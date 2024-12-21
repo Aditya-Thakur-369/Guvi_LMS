@@ -147,7 +147,7 @@ exit                   - Exit the system
 
 ## 👥 Authors
 
-- **Your Name** - *Initial work* - [YourGitHub](https://github.com/Aditya-Thakur-369)
+- **Aditya** - [YourGitHub](https://github.com/Aditya-Thakur-369)
 
 ## 🙏 Acknowledgments
 
@@ -157,8 +157,8 @@ exit                   - Exit the system
 
 ## 📧 Contact
 
-Your Name - adityachauhan0369@gmail.com
-
+Name - Jyotiraditya Chauhan
+Email - adityachauhan0369@gmail.com
 Project Link: [https://github.com/Aditya-Thakur-0369/Guvi_LMS](https://github.com/Aditya-Thakur-0369/Guvi_LMS)
 
 ---

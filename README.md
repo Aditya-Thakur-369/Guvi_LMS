@@ -1,11 +1,9 @@
 # 📚 Library Management System (LMS)
 
 [![Java](https://img.shields.io/badge/Java-17-red)](https://www.oracle.com/java/)
-[![Spring Boot](https://img.shields.io/badge/Spring%20Boot-3.2.0-green)](https://spring.io/projects/spring-boot)
 [![JavaFX](https://img.shields.io/badge/JavaFX-17-blue)](https://openjfx.io/)
-[![MySQL](https://img.shields.io/badge/MySQL-8.0-orange)](https://www.mysql.com/)
 
-A robust, feature-rich Library Management System built with modern technologies to streamline library operations and enhance user experience.
+A robust command-line based Library Management System with optional JavaFX UI capabilities, designed to streamline library operations and enhance user experience.
 
 > [!IMPORTANT]
 > 🚧 **UNDER DEVELOPMENT** 🚧
@@ -13,94 +11,68 @@ A robust, feature-rich Library Management System built with modern technologies 
 > This project is currently in active development and is not ready for production use.
 > Please note:
 > - Features are still being implemented and tested
-> - APIs may change without notice
 > - Documentation is being updated regularly
-> - Security audits are pending
+> - Core functionality is being prioritized
 >
-> We recommend waiting for the first stable release before using this in any production environment.
 > Feel free to star the repository to follow the development progress!
-
-A robust, feature-rich Library Management System built with modern technologies to streamline library operations and enhance user experience.
-
 
 ## 🌟 Key Features
 
 ### Authentication & Security 🔐
-- Dual authentication system for staff and students
-- Role-based access control (RBAC)
-- JWT-based secure authentication
-- Password encryption using BCrypt
-- Session management
+- Simple authentication system for staff and students
+- Role-based access control
+- Password encryption
+- Basic session management
 
 ### Book Management 📖
 - Comprehensive book catalog management
 - ISBN-based book tracking
-- Multiple copies management
 - Book availability status
-- Advanced search and filtering capabilities
-- Book categorization and location tracking
+- Basic search capabilities
+- Book categorization
 
 ### User Management 👥
 - Student profile management
 - Staff profile management
-- Role-based permissions
-- Account status monitoring
-- User activity tracking
+- Basic permissions system
+- User activity logging
 
 ### Borrowing System 🔄
-- Real-time book borrowing and returns
+- Book borrowing and returns
 - Due date tracking
-- Automated overdue notifications
+- Basic overdue notifications
 - Fine calculation system
-- Borrowing history maintenance
-- Multiple books borrowing support
-
-### Attendance System ✅
-- Student attendance tracking
-- Check-in/check-out system
-- Attendance reports generation
-- Time-stamped entries
-- Daily, weekly, and monthly attendance views
+- Borrowing history
 
 ### Reporting System 📊
-- Comprehensive borrowing analytics
-- User activity reports
-- Book utilization statistics
-- Fine collection reports
-- Attendance summary reports
-- Custom report generation
+- Basic borrowing statistics
+- User activity logs
+- Book utilization reports
+- Fine collection summary
+- Simple data exports
 
 ## 🛠️ Technical Architecture
 
-### Backend Technology Stack
-- **Framework**: Spring Boot 3.2.0
+### Core Technology Stack
 - **Language**: Java 17
-- **Database**: MySQL 8.0
-- **ORM**: Hibernate/JPA
-- **Security**: Spring Security
-- **API Documentation**: Swagger/OpenAPI
-- **Testing**: JUnit 5, Mockito
+- **UI Options**: 
+  - Command Line Interface (CLI)
+  - JavaFX 17 (Optional GUI)
+- **Data Storage**: File-based system
+- **Build System**: Basic Java compilation
 
-### Frontend Technology Stack
-- **UI Framework**: JavaFX 17
+### Optional UI Technology
+- **Framework**: JavaFX 17
 - **Styling**: CSS3
 - **Layout**: FXML
-- **Components**: Custom JavaFX Controls
-- **Charts**: JavaFX Charts
-
-### Database Schema
-- Normalized database design
-- Referential integrity
-- Indexed queries
-- Optimized for performance
+- **Components**: Basic JavaFX Controls
 
 ## 🚀 Getting Started
 
 ### Prerequisites
 ```bash
 - Java Development Kit (JDK) 17 or higher
-- Maven 3.8+
-- MySQL 8.0
+- JavaFX SDK 17 (if using GUI)
 - IDE (IntelliJ IDEA/Eclipse) with JavaFX support
 ```
 
@@ -112,28 +84,14 @@ A robust, feature-rich Library Management System built with modern technologies 
    cd library-management-system
    ```
 
-2. **Configure MySQL**
+2. **Compile the project**
    ```bash
-   # Create database
-   mysql -u root -p
-   CREATE DATABASE library_management;
+   javac -d build src/com/librarymanagement/*.java
    ```
 
-3. **Update application.properties**
-   ```properties
-   spring.datasource.url=jdbc:mysql://localhost:3306/library_management
-   spring.datasource.username=your_username
-   spring.datasource.password=your_password
-   ```
-
-4. **Build the project**
+3. **Run the application**
    ```bash
-   mvn clean install
-   ```
-
-5. **Run the application**
-   ```bash
-   java -jar target/library-management-system-1.0.0.jar
+   java -cp build com.librarymanagement.Main
    ```
 
 ## 🔧 Project Structure
@@ -141,44 +99,21 @@ A robust, feature-rich Library Management System built with modern technologies 
 ```plaintext
 library-management-system/
 ├── src/
-│   ├── main/
-│   │   ├── java/
-│   │   │   └── com/library/
-│   │   │       ├── config/
-│   │   │       ├── controller/
-│   │   │       ├── model/
-│   │   │       ├── repository/
-│   │   │       ├── service/
-│   │   │       └── ui/
-│   │   └── resources/
-│   └── test/
-└── pom.xml
-```
-
-## 📋 API Endpoints
-
-### Book Management
-```plaintext
-GET    /api/books          - Get all books
-POST   /api/books          - Add a new book
-PUT    /api/books/{id}     - Update a book
-DELETE /api/books/{id}     - Delete a book
-GET    /api/books/search   - Search books
-```
-
-### User Management
-```plaintext
-GET    /api/users          - Get all users
-POST   /api/users          - Add a new user
-PUT    /api/users/{id}     - Update a user
-DELETE /api/users/{id}     - Delete a user
-```
-
-### Borrowing
-```plaintext
-POST   /api/borrow         - Borrow a book
-PUT    /api/borrow/return  - Return a book
-GET    /api/borrow/user    - Get user's borrowed books
+│   ├── com/
+│   │   ├── librarymanagement/
+│   │   │   ├── Main.java              # Main class to start the application
+│   │   │   ├── model/                 # Classes for data models
+│   │   │   ├── service/               # Classes for core logic
+│   │   │   ├── dao/                   # Data access objects
+│   │   │   └── util/                  # Utility classes
+├── resources/
+│   ├── data/                          # Data storage files
+│   │   ├── books.txt
+│   │   ├── students.txt
+│   │   └── staff.txt
+├── .gitignore
+├── README.md
+├── build/                             # Compiled class files
 ```
 
 ## 💻 Development
@@ -186,59 +121,20 @@ GET    /api/borrow/user    - Get user's borrowed books
 ### Code Style
 - Google Java Style Guide
 - Clean Code principles
-- SOLID design principles
 - Proper documentation
+- Consistent formatting
 
-### Testing
-```bash
-# Run unit tests
-mvn test
-
-# Run integration tests
-mvn verify
-
-# Generate coverage report
-mvn jacoco:report
-```
-
-## 🔄 CI/CD Pipeline
-
-- GitHub Actions workflow
-- Automated testing
-- Code quality checks
-- Build verification
-- Docker image creation
-
-## 📦 Dependencies
-
-```xml
-<dependencies>
-    <!-- Spring Boot -->
-    <dependency>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-starter-web</artifactId>
-    </dependency>
-    <dependency>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-starter-data-jpa</artifactId>
-    </dependency>
-    <dependency>
-        <groupId>org.springframework.boot</groupId>
-        <artifactId>spring-boot-starter-security</artifactId>
-    </dependency>
-    
-    <!-- JavaFX -->
-    <dependency>
-        <groupId>org.openjfx</groupId>
-        <artifactId>javafx-controls</artifactId>
-    </dependency>
-    
-    <!-- Database -->
-    <dependency>
-        <groupId>mysql</groupId>
-        <artifactId>mysql-connector-java</artifactId>
-    </dependency>
-</dependencies>
+### Command Line Interface
+The system supports the following commands:
+```plaintext
+help                    - Show available commands
+login                   - Login as student or staff
+add-book               - Add a new book
+search-book            - Search for books
+borrow-book            - Borrow a book
+return-book            - Return a book
+list-books             - List all books
+exit                   - Exit the system
 ```
 
 ## 🤝 Contributing
@@ -255,9 +151,8 @@ mvn jacoco:report
 
 ## 🙏 Acknowledgments
 
-- Spring Boot Documentation
 - JavaFX Documentation
-- MySQL Documentation
+- Java File I/O Documentation
 - Stack Overflow Community
 
 ## 📧 Contact

@@ -159,7 +159,7 @@ exit                   - Exit the system
 
 Your Name - adityachauhan0369@gmail.com
 
-Project Link: [https://github.com/Aditya-Thakur-0369/library-management-system](https://github.com/Aditya-Thakur-0369/Guvi_LMS)
+Project Link: [https://github.com/Aditya-Thakur-0369/Guvi_LMS](https://github.com/Aditya-Thakur-0369/Guvi_LMS)
 
 ---
 ⭐️ Star this repo if you find it helpful!

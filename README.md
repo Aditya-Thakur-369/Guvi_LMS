@@ -7,6 +7,22 @@
 
 A robust, feature-rich Library Management System built with modern technologies to streamline library operations and enhance user experience.
 
+> [!IMPORTANT]
+> 🚧 **UNDER DEVELOPMENT** 🚧
+>
+> This project is currently in active development and is not ready for production use.
+> Please note:
+> - Features are still being implemented and tested
+> - APIs may change without notice
+> - Documentation is being updated regularly
+> - Security audits are pending
+>
+> We recommend waiting for the first stable release before using this in any production environment.
+> Feel free to star the repository to follow the development progress!
+
+A robust, feature-rich Library Management System built with modern technologies to streamline library operations and enhance user experience.
+
+
 ## 🌟 Key Features
 
 ### Authentication & Security 🔐

@@ -132,21 +132,6 @@ library_management_system/
 - Proper documentation
 - Consistent formatting
 
-### Command Line Interface
-The system supports the following commands:
-```plaintext
-help                    - Show available commands
-login                   - Login as student or staff
-add-book               - Add a new book
-search-book            - Search for books by various criteria
-borrow-book            - Borrow a book
-return-book            - Return a book
-list-books             - List all books
-manage-profile         - Update user profile
-view-fines             - Check and pay fines
-exit                   - Exit the system
-```
-
 ## 🤝 Contributing
 
 1. Fork the repository
